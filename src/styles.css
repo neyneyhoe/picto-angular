@@ -1,1 +1,143 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --font-size-small: 10px;
+  --font-size-medium: 14px;
+  --font-size-large: 18px;
+
+  --font-color-primary: #c7c7c7;
+  --font-color-secondary: #999999;
+  --background-color-primary: #1e1e1e;
+  --background-color-secondary: #333333;
+  --background-color-dark: #121212;
+  --background-color-light: #2a2a2a;
+  --background-color-green: #70bb72af;
+
+  --button-bg-color: #4CAF50;
+  --button-bg-color-hover: #39943dbe;
+  --button-font-color: #ffffff;
+}
+
+
+html,
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  background-color: var(--background-color-dark);
+  color: var(--button-font-color);
+  overflow: hidden;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--button-bg-color);
+  color: var(--button-font-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: var(--font-size-medium);
+}
+
+button:hover {
+  background-color: var(--button-bg-color-hover);
+  border: 2px solid var(--button-font-color);
+}
+
+.secondary-btn {
+  padding: 10px 20px;
+  background-color: var(--background-color-light);
+  color: var(--button-bg-color);
+  border: 2px solid var(--button-bg-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  background-color: var(--button-font-color);
+  color: var(--button-bg-color);
+  border: 2px solid var(--button-bg-color);
+}
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid var(--background-color-secondary);
+  border-radius: 5px;
+  background-color: var(--background-color-primary);
+  color: var(--font-color-primary);
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  color: var(--font-color-primary);
+}
+
+.exit-button {
+  background: none;
+  border: none;
+  color: var(--font-color-primary);
+  font-size: var(--font-size-large);
+  cursor: pointer;
+  width: min-content;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+.exit-button:hover {
+  color: var(--button-bg-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--font-color-primary);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid var(--background-color-secondary);
+  border-radius: 5px;
+  background-color: var(--background-color-secondary);
+  color: var(--font-color-primary);
+}
+
+.form-group input::placeholder {
+  color: #999999;
+}
+
+.submit {
+  width: 100%;
+  padding: 15px;
+  font-size: var(--font-size-large);
+  border: 2px solid var(--background-color-light);
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+.submit:hover {
+  border: 2px solid var(--button-font-color);
+}

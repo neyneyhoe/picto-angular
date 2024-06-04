@@ -1,0 +1,44 @@
+<div class="messaging-container">
+  <div class="messages" id="messages">
+    <div
+      *ngFor="let message of messages"
+      [ngClass]="{
+        message: true,
+        'user-message': message.type === 'user',
+        'response-message': message.type === 'response'
+      }"
+    >
+      <div>{{ message.text }}</div>
+      <div class="images" *ngIf="message.images && message.images.length > 0">
+        <div
+          class="image-row"
+          *ngFor="let image of message.images; index as i; trackBy: trackByFn"
+        >
+          <img [src]="image" alt="Image" (click)="openModal(image)" />
+        </div>
+      </div>
+      <div
+        class="timestamp"
+        [ngClass]="{ 'timestamp-user': message.type === 'user' }"
+      >
+        {{ message.timestamp }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="imageModal" class="modal" [ngClass]="{ show: isModalOpen }">
+  <span class="close" (click)="closeModal()">&times;</span>
+  <div class="modal-content">
+    <img class="modal-img" [src]="currentImage" />
+    <div class="modal-nav">
+      <button (click)="prevImage()">&laquo;</button>
+      <button (click)="nextImage()">&raquo;</button>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a [href]="currentImage" download="image.jpg" class="download-btn"
+      >Download</a
+    >
+  </div>
+</div>

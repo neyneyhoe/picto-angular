@@ -1,0 +1,78 @@
+.main-container {
+  width: 80vw;
+  max-width: 800px;
+  min-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--background-color-light);
+  color: var(--button-font-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-left {
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar-right .nav-button {
+  padding: 10px 15px;
+  margin-left: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid var(--background-color-light);
+}
+
+.navbar-right .nav-button:hover {
+  border: 2px solid var(--button-font-color);
+}
+
+.input-container {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid var(--background-color-secondary);
+  background-color: var(--background-color-light);
+  position: sticky;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--background-color-secondary);
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: var(--background-color-primary);
+  font-size: var(--font-size-large);
+  color: var(--font-color-primary);
+}
+
+.input-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.marginForm {
+  margin-top: 50px;
+}
